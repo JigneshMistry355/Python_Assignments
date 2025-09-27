@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "name": "Alice Johnson",
+    "email": "alice.johnson@example.com",
+    "age": 28,
+    "city": "New York",
+    "is_active": true
+  },
+  {
+    "id": 2,
+    "name": "Brian Smith",
+    "email": "brian.smith@example.com",
+    "age": 34,
+    "city": "Chicago",
+    "is_active": false
+  },
+  {
+    "id": 3,
+    "name": "Catherine Lee",
+    "email": "catherine.lee@example.com",
+    "age": 25,
+    "city": "Los Angeles",
+    "is_active": true
+  },
+  {
+    "id": 4,
+    "name": "David Miller",
+    "email": "david.miller@example.com",
+    "age": 41,
+    "city": "Houston",
+    "is_active": true
+  },
+  {
+    "id": 5,
+    "name": "Emma Davis",
+    "email": "emma.davis@example.com",
+    "age": 30,
+    "city": "Seattle",
+    "is_active": false
+  },
+  {
+    "id": 6,
+    "name": "Franklin Moore",
+    "email": "franklin.moore@example.com",
+    "age": 37,
+    "city": "Boston",
+    "is_active": true
+  },
+  {
+    "id": 7,
+    "name": "Grace Wilson",
+    "email": "grace.wilson@example.com",
+    "age": 22,
+    "city": "San Francisco",
+    "is_active": true
+  },
+  {
+    "id": 8,
+    "name": "Henry Taylor",
+    "email": "henry.taylor@example.com",
+    "age": 45,
+    "city": "Denver",
+    "is_active": false
+  },
+  {
+    "id": 9,
+    "name": "Isabella Martinez",
+    "email": "isabella.martinez@example.com",
+    "age": 29,
+    "city": "Austin",
+    "is_active": true
+  },
+  {
+    "id": 10,
+    "name": "Jack Anderson",
+    "email": "jack.anderson@example.com",
+    "age": 33,
+    "city": "Miami",
+    "is_active": false
+  }
+]
