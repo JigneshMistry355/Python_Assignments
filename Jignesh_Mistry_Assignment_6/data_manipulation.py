@@ -18,12 +18,19 @@ def isValidJSON(json_string):
 if my_details:
     result = my_details
     if isValidJSON(result):
-        st.write(result)
+        st.json(result)  # preview
         json.dumps(result)
         with open("my_details.json", 'w') as f:
             f.writelines(result)
+        st.download_button(
+            label="Download JSON file",
+            data=result,
+            file_name='my_data.json',
+            mime='application/json'
+        )
     else:
         st.markdown(f"Invalid ***:orange[JSON]*** format")
+
 
 
 ###########################################################################################
@@ -49,14 +56,32 @@ with open("user.json", "r") as f:
 st.markdown(f"---")
 st.markdown("2. load a ***:orange[json]*** file and print users older than 25 years of age")
 
-with open("user.json", "r") as f:
-    users = json.load(f)
-    st.markdown(f"**Names** of all users with age greater than 25 ")
-    i = 1
-    for user in users:
-        if user["age"] > 25:
-            st.write(i, user["name"])
-            i += 1
+# run this section locally if you have  user.json file
+# ------------------------------------------------------------------
+# with open("user.json", "r") as f:
+#     users = json.load(f)
+#     st.markdown(f"**Names** of all users with age greater than 25 ")
+#     i = 1
+#     for user in users:
+#         if user["age"] > 25:
+#             st.write(i, user["name"])
+#             i += 1
+# -------------------------------------------------------------------
+
+
+upload_file = st.file_uploader("user.json", type="json")
+if upload_file:
+    file_content = upload_file.read()
+    try:
+        user_data = json.loads(file_content)
+        st.success("JSON file loaded succesfully")
+        for i, user in enumerate(user_data, start=1):
+            if user["age"] > 25:
+                st.write(f"{i}. {user.get('name', 'No name found')}")
+    except json.JSONDecodeError:
+        st.error("Faile to decode json")
+else:
+    st.warning("user.json was not found")
 
 
 ###########################################################################################
